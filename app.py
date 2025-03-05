@@ -73,12 +73,12 @@ pipeline = DataPipeline(
     dataset_name="dnkumars/cybersecurity-intrusion-detection-dataset",
     github_user="NathanGhenassia",
     github_repo="Data_pipeline_and_ml",
-    github_branch="main"
+    github_branch="master"
 )
 
 # Función para obtener datasets desde GitHub en formato CSV
 def load_dataset_from_github(filename):
-    url = f"https://raw.githubusercontent.com/NathanGhenassia/Data_pipeline_and_ml/main/datos/{filename}"
+    url = f"https://raw.githubusercontent.com/NathanGhenassia/Data_pipeline_and_ml/master/datos/{filename}"
     response = requests.get(url)
     if response.status_code == 200:
         return pd.read_csv(StringIO(response.text))
